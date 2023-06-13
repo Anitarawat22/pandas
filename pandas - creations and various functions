@@ -1,0 +1,43 @@
+pandas is a python library  that allows us to easily read and work with the different types of data so we can use this to analyze csv files excel and other similar formats.
+
+import pandas as pd      # importing pandas as pd
+df                      # stands for DataFrame
+df.shape                # give you the shape of the pandas with the exact rows and columns
+df.info                 # provides you the information regarding the dataframe
+df.head(10)              #give you the first 10 rows and columns
+df.tail(10)              # give you the last 10 rows and columns
+
+
+--->creataing a dataframes
+
+
+people = {
+        "first" : ["anu","sneha","raunak"],
+        "last" : ["rawat","singh","sambharwal"],
+         "email" : ["anurawat@gmail.com","snehasingh@gmail.com","raunaksambharwal@gmail.com"]
+}
+
+df  = pd.DataFrame(people)
+df
+
+
+people['email']                            ['anurawat@gmail.com', 'snehasingh@gmail.com', 'raunaksambharwal@gmail.com']
+type(people['email'])                      list
+
+ 
+ 
+df['email']               
+type(['email'])                         pandas.core.series.Series
+
+----->accesing multiple columns
+df[['last','email']]  #show you the last with all the emails with its
+
+---->iloc:  iloc is used for integer indexing
+iloc is used to access the rows by  integer locations
+df.iloc[0]
+df.iloc[[0,1]]
+df.iloc[[0,1],2]
+
+
+--->loc : loc is typically used for label indexing and can access multiple columns.
+df.loc[[0,1]]
